@@ -7,12 +7,12 @@ export default function FeaturedTreatments() {
   const features = TREATMENTS.slice(0, 3);
 
   return (
-    <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-24">
-      <div className="bg-[#F8F5FC] rounded-[40px] p-8 md:p-16">
+    <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
+      <div className="bg-[#F8F5FC] rounded-3xl p-6 md:p-12">
         
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
           <div>
-             <h2 className="font-serif text-4xl md:text-5xl mb-4">Popular Treatments</h2>
+             <h2 className="font-serif text-3xl md:text-4xl mb-3">Popular Treatments</h2>
              <p className="text-gray-500 max-w-md">
                Discover our most requested procedures for this season, curated for immediate results.
              </p>
@@ -22,16 +22,16 @@ export default function FeaturedTreatments() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {features.map((treatment, idx) => (
             <Link key={treatment.id} href={`/treatments/${treatment.id}`}>
               <div 
-                className="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer h-full fade-in-up"
+                className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer h-full fade-in-up"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
                 }}
               >
-                <div className="w-full h-40 bg-gray-100 rounded-2xl mb-6 relative overflow-hidden">
+                <div className="w-full h-32 bg-gray-100 rounded-xl mb-4 relative overflow-hidden">
                   <Image
                     src={treatment.image}
                     alt={treatment.title}
@@ -46,7 +46,7 @@ export default function FeaturedTreatments() {
                     <span className="text-[10px] font-bold text-purple-500 uppercase tracking-widest bg-purple-50 px-2 py-1 rounded-md">
                       {treatment.category}
                     </span>
-                    <h3 className="font-serif text-xl font-bold mt-3 mb-1 group-hover:text-purple-600 transition-colors">
+                    <h3 className="font-serif text-lg font-bold mt-2 mb-1 group-hover:text-purple-600 transition-colors">
                       {treatment.title}
                     </h3>
                   </div>

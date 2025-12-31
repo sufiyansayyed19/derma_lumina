@@ -33,15 +33,15 @@ export default function Testimonials() {
   const current = TESTIMONIALS[currentIndex];
 
   return (
-    <section className="py-12 md:py-24 px-6 bg-white">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="py-12 md:py-16 px-4 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
         
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16 page-transition-in">
-          <span className="text-purple-600 font-bold tracking-widest uppercase text-xs mb-3 block">
+        <div className="text-center mb-10 md:mb-12 page-transition-in">
+          <span className="text-purple-600 font-bold tracking-widest uppercase text-xs mb-2 block">
             What Our Clients Say
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl text-gray-900 mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-3">
             Real Results, Real <span className="italic text-purple-600">Stories</span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
@@ -50,12 +50,12 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center fade-in-up" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center fade-in-up" style={{ animation: 'fadeInUp 0.8s ease-out' }}>
           
           {/* Left: Before & After Images */}
-          <div className="flex flex-col items-center gap-6 fade-in-up" style={{ animation: 'fadeInUp 0.8s ease-out 0.2s both' }}>
+          <div className="flex flex-col items-center gap-4 fade-in-up" style={{ animation: 'fadeInUp 0.8s ease-out 0.2s both' }}>
             {/* Before & After Slider */}
-            <div className="relative w-full h-72 md:h-96 bg-gray-100 rounded-[28px] md:rounded-[32px] overflow-hidden shadow-xl md:shadow-2xl border-2 md:border-4 border-purple-50">
+            <div className="relative w-full h-64 md:h-80 bg-gray-100 rounded-2xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-lg border-2 md:border-4 border-purple-50">
               <Image
                 src={current.beforeAfter}
                 alt={`${current.name} - Before & After`}
@@ -85,14 +85,14 @@ export default function Testimonials() {
 
             {/* Client Info Below Image */}
             <div className="text-center w-full">
-              <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 rounded-full border-2 md:border-4 border-purple-100 overflow-hidden shadow-lg bg-gradient-to-br from-purple-300 to-purple-600 flex items-center justify-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 md:mb-3 rounded-full border-2 md:border-3 border-purple-100 overflow-hidden shadow-md bg-gradient-to-br from-purple-300 to-purple-600 flex items-center justify-center">
                 {/* Avatar with initials */}
-                <span className="text-white text-base md:text-lg font-bold">
+                <span className="text-white text-sm md:text-base font-bold">
                   {current.name.split(' ').map(n => n[0]).join('')}
                 </span>
               </div>
-              <h3 className="font-serif text-xl md:text-2xl text-gray-900 mb-1">{current.name}</h3>
-              <p className="text-purple-600 text-xs md:text-sm font-bold uppercase tracking-widest mb-2 md:mb-3">
+              <h3 className="font-serif text-lg md:text-xl text-gray-900 mb-1">{current.name}</h3>
+              <p className="text-purple-600 text-xs md:text-sm font-bold uppercase tracking-widest mb-2">
                 {current.treatment}
               </p>
 
@@ -113,15 +113,15 @@ export default function Testimonials() {
           <div className="flex flex-col justify-center fade-in-up" style={{ animation: 'fadeInUp 0.8s ease-out 0.4s both' }}>
             
             {/* Quote */}
-            <div className="mb-6 md:mb-8">
-              <p className="text-gray-600 text-base md:text-lg font-serif italic leading-relaxed mb-6 relative pl-6">
-                <span className="absolute left-0 top-0 text-4xl text-purple-200">&quot;</span>
+            <div className="mb-5 md:mb-6">
+              <p className="text-gray-600 text-base md:text-base font-serif italic leading-relaxed mb-4 relative pl-5">
+                <span className="absolute left-0 top-0 text-3xl text-purple-200">&quot;</span>
                 {current.text}
               </p>
             </div>
 
             {/* Testimonial Counter */}
-            <div className="mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
+            <div className="mb-5 md:mb-6 flex items-center gap-2 md:gap-3">
               <div className="h-1 flex-1 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"></div>
               <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">
                 {currentIndex + 1} of {TESTIMONIALS.length}
@@ -130,7 +130,7 @@ export default function Testimonials() {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex items-center gap-3 md:gap-4 flex-wrap">
+            <div className="flex items-center gap-2 md:gap-3 flex-wrap">
               <button
                 onClick={handlePrev}
                 className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-purple-600 hover:text-white text-gray-800 flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg"
@@ -168,7 +168,7 @@ export default function Testimonials() {
             </div>
 
             {/* Trust Badge */}
-            <div className="mt-10 md:mt-12 p-5 md:p-6 bg-purple-50 rounded-2xl border border-purple-100">
+            <div className="mt-6 md:mt-8 p-4 md:p-5 bg-purple-50 rounded-xl border border-purple-100">
               <p className="text-sm text-gray-600 font-sans">
                 <span className="font-bold text-purple-600">✓ Verified Reviews</span> from real clients. 
                 We&apos;re proud of the trust our patients place in us.

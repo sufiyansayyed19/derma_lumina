@@ -26,15 +26,15 @@ export default function AboutPage() {
       </header>
 
       {/* --- BIO & IMAGE SECTION --- */}
-      <section className="max-w-300 mx-auto px-6 md:px-12 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           
           {/* Image Column */}
           <div className="relative">
             {/* Decorative background square */}
             <div className="absolute top-4 -left-4 w-full h-full border-2 border-[#9B8AFB] rounded-3xl z-0"></div>
             
-            <div className="relative h-125 w-full bg-gray-100 rounded-3xl overflow-hidden shadow-xl z-10">
+            <div className="relative h-80 w-full bg-gray-100 rounded-3xl overflow-hidden shadow-lg z-10">
               <Image 
                 src="/images/doctor/doctor.png" 
                 alt={CLINIC_INFO.doctor}
@@ -44,18 +44,18 @@ export default function AboutPage() {
             </div>
             
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg z-20 border-l-4 border-[#9B8AFB]">
-               <p className="text-4xl font-serif font-bold text-gray-900">10+</p>
-               <p className="text-xs text-gray-500 uppercase tracking-widest">Years of Practice</p>
+            <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-md z-20 border-l-4 border-[#9B8AFB]">
+               <p className="text-3xl font-serif font-bold text-gray-900">10+</p>
+               <p className="text-[10px] text-gray-500 uppercase tracking-widest">Years of Practice</p>
             </div>
           </div>
 
           {/* Text Column */}
           <div>
-            <h2 className="font-serif text-4xl mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">
               &quot;Beauty is about <span className="text-[#9B8AFB] italic">confidence</span>, not just perfection.&quot;
             </h2>
-            <div className="space-y-6 text-gray-600 font-sans leading-relaxed text-lg">
+            <div className="space-y-4 text-gray-600 font-sans leading-relaxed text-base md:text-lg">
               <p>
                 Dr. Ananya Sharma is a board-certified dermatologist specializing in cosmetic 
                 dermatology and laser surgery. With over a decade of experience, she has helped 
@@ -69,8 +69,8 @@ export default function AboutPage() {
             </div>
 
             {/* Signature Area (Optional) */}
-            <div className="mt-10 pt-10 border-t border-gray-100">
-               <p className="font-serif text-2xl text-gray-400 italic">Dr. Ananya S.</p>
+            <div className="mt-6 pt-6 border-t border-gray-100">
+               <p className="font-serif text-lg text-gray-400 italic">Dr. Ananya S.</p>
             </div>
           </div>
 
@@ -78,21 +78,21 @@ export default function AboutPage() {
       </section>
 
       {/* --- CREDENTIALS GRID --- */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-300 mx-auto px-6 md:px-12">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl mb-4">Credentials & Expertise</h2>
+      <section className="bg-gray-50 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl mb-3">Credentials & Expertise</h2>
             <p className="text-gray-500">Why patients trust their skin to us.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Card 1 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-              <div className="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-6 text-[#9B8AFB]">
-                <GraduationCap size={28} />
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+              <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4 text-[#9B8AFB]">
+                <GraduationCap size={24} />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Education</h3>
+              <h3 className="font-serif text-lg font-bold mb-2">Education</h3>
               <p className="text-gray-600">
                 MBBS (Gold Medalist)<br/>
                 MD Dermatology<br/>
@@ -101,11 +101,11 @@ export default function AboutPage() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-              <div className="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-6 text-pink-400">
-                <Award size={28} />
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+              <div className="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-4 text-pink-400">
+                <Award size={24} />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Recognition</h3>
+              <h3 className="font-serif text-lg font-bold mb-2">Recognition</h3>
               <p className="text-gray-600">
                 &quot;Best Dermatologist 2024&quot;<br/>
                 Member of IADVL<br/>
@@ -114,11 +114,11 @@ export default function AboutPage() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-              <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-400">
-                <Heart size={28} />
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center">
+              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
+                <Heart size={24} />
               </div>
-              <h3 className="font-serif text-xl font-bold mb-3">Philosophy</h3>
+              <h3 className="font-serif text-lg font-bold mb-2">Philosophy</h3>
               <p className="text-gray-600">
                 Patient-first approach using<br/>
                 FDA-approved technology<br/>
@@ -131,12 +131,12 @@ export default function AboutPage() {
       </section>
 
       {/* --- CTA SECTION --- */}
-      <section className="py-20 text-center px-6">
-        <div className="bg-[#9B8AFB] text-white rounded-[40px] max-w-5xl mx-auto p-12 md:p-20 relative overflow-hidden">
+      <section className="py-12 md:py-16 text-center px-4">
+        <div className="bg-[#9B8AFB] text-white rounded-3xl max-w-4xl mx-auto p-8 md:p-12 relative overflow-hidden">
           
           <div className="relative z-10">
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">Ready to start your journey?</h2>
-            <p className="text-purple-100 text-lg mb-8 max-w-xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to start your journey?</h2>
+            <p className="text-purple-100 text-base md:text-lg mb-6 max-w-xl mx-auto">
               Schedule a comprehensive consultation to discuss your skin and body goals today.
             </p>
             <Link href={CLINIC_INFO.bookingLink} className="bg-white text-[#9B8AFB] px-10 py-4 rounded-full font-bold shadow-xl hover:bg-gray-100 transition inline-block">
