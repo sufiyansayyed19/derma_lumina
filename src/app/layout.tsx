@@ -17,6 +17,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://derma-lumina.vercel.app"),
   title: "Lumina Skin & Body | Dr. Ananya Sharma",
   description: "Advanced dermatology and body contouring treatments.",
 };
