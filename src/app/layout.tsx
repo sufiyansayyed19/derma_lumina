@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -19,7 +19,11 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "Lumina Skin & Body | Dr. Ananya Sharma",
   description: "Advanced dermatology and body contouring treatments.",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

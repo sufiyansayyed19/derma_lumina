@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Breadcrumb from "../../components/ui/Breadcrumb";
 import BeforeAfterSlider from "../../components/ui/BeforeAfterSlider";
 import { TREATMENTS } from "../../lib/data";
 
@@ -11,6 +10,7 @@ interface Treatment {
   shortDesc: string;
   category: string;
   image: string;
+  beforeAfterImage?: string;
 }
 
 export default function TreatmentsPage() {
@@ -125,6 +125,7 @@ function TreatmentCard({ item, idx, showSlider }: { item: Treatment, idx: number
               </div>
             </>
           )}
+        </div>
 
         <div className="p-7 flex flex-col gap-4">
           <div className="space-y-3">

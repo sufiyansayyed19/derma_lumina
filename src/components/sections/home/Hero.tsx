@@ -20,7 +20,7 @@ export default function Hero() {
         {/* --- LEFT COLUMN: Image --- */}
         <div className="relative w-full max-w-[500px] mx-auto lg:mx-0 order-2 lg:order-1">
            <div 
-             className="relative h-[450px] md:h-[600px] w-full bg-gray-100 rounded-t-[200px] rounded-b-[200px] border-8 border-white shadow-2xl overflow-hidden z-10 fade-in-up"
+             className="relative h-[320px] md:h-[600px] w-full bg-gray-100 rounded-t-[200px] rounded-b-[200px] border-4 md:border-8 border-white shadow-2xl overflow-hidden z-10 fade-in-up"
              style={{
                animation: hasBeenInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none',
              }}
@@ -34,13 +34,13 @@ export default function Hero() {
               />
            </div>
 
-           <div className="absolute bottom-10 -right-4 md:-right-8 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce-slow z-20 border border-gray-100 max-w-[200px]">
-              <div className="bg-green-50 p-2 rounded-full">
-                <CheckCircle2 className="text-green-600 w-6 h-6" />
+           <div className="absolute bottom-6 md:bottom-10 -right-2 md:-right-8 bg-white p-2 md:p-4 rounded-lg md:rounded-xl shadow-lg md:shadow-xl flex items-center gap-2 md:gap-4 animate-bounce-slow z-20 border border-gray-100 max-w-[160px] md:max-w-[200px]">
+              <div className="bg-green-50 p-1.5 md:p-2 rounded-full">
+                <CheckCircle2 className="text-green-600 w-4 md:w-6 h-4 md:h-6" />
               </div>
               <div>
-                 <span className="font-bold block text-gray-900 text-sm">MBBS, MD</span>
-                 <span className="text-gray-500 text-xs">Board Certified</span>
+                 <span className="font-bold block text-gray-900 text-xs md:text-sm">MBBS, MD</span>
+                 <span className="text-gray-500 text-[10px] md:text-xs">Board Certified</span>
               </div>
            </div>
         </div>

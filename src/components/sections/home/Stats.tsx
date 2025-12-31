@@ -35,15 +35,15 @@ export default function Stats() {
   return (
     <section 
       ref={ref}
-      className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100"
+      className="max-w-[1400px] mx-auto px-6 md:px-12 py-8 md:py-20 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-100"
     >
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
         {stats.map((stat, idx) => {
           const Icon = stat.icon;
           return (
             <div
               key={idx}
-              className={`flex flex-col items-center text-center p-8 rounded-2xl transition-all duration-500 ${
+              className={`flex flex-col items-center text-center p-4 md:p-8 rounded-2xl transition-all duration-500 ${
                 hasBeenInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
               style={{
@@ -51,13 +51,13 @@ export default function Stats() {
               }}
             >
               {/* Icon with Glow */}
-              <div className={`w-16 h-16 flex items-center justify-center rounded-full ${stat.color} mb-4 glow-soft`}>
-                <Icon size={32} />
+              <div className={`w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full ${stat.color} mb-3 md:mb-4 glow-soft`}>
+                <Icon size={24} className="md:w-8 md:h-8" />
               </div>
 
               {/* Value with Counter Animation */}
               <h3
-                className="font-serif text-5xl font-bold text-gray-900 mb-2 pulse-soft"
+                className="font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-2 pulse-soft"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${idx * 0.15 + 0.2}s both, pulse-soft 3s ease-in-out ${idx * 0.15 + 0.5}s infinite`,
                 }}
