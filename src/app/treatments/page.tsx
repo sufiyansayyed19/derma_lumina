@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import Image from "next/image";
+import Breadcrumb from "../../components/ui/Breadcrumb";
 import BeforeAfterSlider from "../../components/ui/BeforeAfterSlider";
 import { TREATMENTS } from "../../lib/data";
 
@@ -22,7 +23,7 @@ export default function TreatmentsPage() {
     <main className="min-h-screen bg-white pb-20">
       
       {/* --- REFINED HEADER (Clean, Left-Aligned, High-End) --- */}
-      <section className="pt-8 md:pt-18 pb-6 md:pb-10 px-6">
+      <section className="pt-6 md:pt-8 pb-6 md:pb-10 px-6">
         <div className="max-w-[1200px] mx-auto">
           
           {/* Small Eyebrow Text */}
@@ -32,12 +33,12 @@ export default function TreatmentsPage() {
 
           {/* Big Headline */}
           <div 
-            className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-100 pb-12 page-header-reveal"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-gray-100  page-header-reveal"
             style={{
               animation: 'revealUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)',
             }}
           >
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-gray-900 leading-[0.9]">
+            <h1 className="font-serif text-4xl sm:text-3xl md:text-4xl lg:text-7xl text-gray-900 leading-[0.9]">
               Our <br />
               <span className="italic text-gray-400">Treatments</span>
             </h1>
@@ -55,22 +56,10 @@ export default function TreatmentsPage() {
       </section>
 
       {/* --- CONTENT GRID --- */}
-      <div className="max-w-[1200px] mx-auto px-6 pt-6 md:pt-8">
+      <div className="max-w-[1200px] mx-auto px-6 pt-8">
         <TreatmentSection title="Skin & Face" subtitle="Clinical Dermatology" items={skinTreatments} />
         <TreatmentSection title="Body & Slimming" subtitle="Contouring" items={bodyTreatments} />
         <TreatmentSection title="Hair Restoration" subtitle="Trichology" items={hairTreatments} />
-
-        <div className="mt-10 md:mt-14 flex flex-col items-center text-center gap-3 bg-gradient-to-r from-purple-50 to-gray-50 rounded-2xl border border-gray-100 px-5 py-6">
-          <p className="text-sm md:text-base text-gray-700">
-            Not sure which treatment fits? Book a quick consult and we’ll guide you.
-          </p>
-          <Link
-            href="/contact"
-            className="px-6 py-3 rounded-full bg-purple-600 text-white font-bold text-sm md:text-base shadow-md hover:shadow-lg transition-all"
-          >
-            Book a Consultation
-          </Link>
-        </div>
       </div>
 
     </main>
@@ -82,7 +71,7 @@ export default function TreatmentsPage() {
 function TreatmentSection({ title, subtitle, items }: { title: string, subtitle: string, items: Treatment[] }) {
   if (items.length === 0) return null;
   return (
-    <div className="mb-16 md:mb-24">
+    <div className="mb-24">
       <div className="flex items-end justify-between mb-10 gap-4">
         <div>
            <span className="text-xs font-bold text-gray-400 tracking-widest uppercase block mb-2">{subtitle}</span>
@@ -94,7 +83,7 @@ function TreatmentSection({ title, subtitle, items }: { title: string, subtitle:
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {items.map((item, idx) => (
           <TreatmentCard key={item.id} item={item} idx={idx} showSlider={idx === 0} />
         ))}
@@ -107,13 +96,13 @@ function TreatmentCard({ item, idx, showSlider }: { item: Treatment, idx: number
   return (
     <Link href={`/treatments/${item.id}`} className="group block h-full">
       <div 
-        className="h-full rounded-[28px] md:rounded-[32px] border border-gray-100 bg-white shadow-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
+        className="h-full rounded-[32px] border border-gray-100 bg-white shadow-sm overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
         style={{
           animation: `fadeInUp 0.6s ease-out ${idx * 0.15}s both`,
         }}
       >
         
-        <div className="relative h-52 md:h-64 bg-gray-50 overflow-hidden">
+        <div className="relative h-64 bg-gray-50 overflow-hidden">
           {showSlider && item.beforeAfterImage ? (
             <BeforeAfterSlider
               beforeImage={item.image}
@@ -139,7 +128,7 @@ function TreatmentCard({ item, idx, showSlider }: { item: Treatment, idx: number
           )}
         </div>
 
-        <div className="p-5 md:p-7 flex flex-col gap-3 md:gap-4">
+        <div className="p-7 flex flex-col gap-4">
           <div className="space-y-3">
             <h3 className="font-serif text-2xl text-gray-900 transition-colors group-hover:text-purple-600 leading-tight">
               {item.title}

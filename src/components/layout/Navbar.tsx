@@ -43,17 +43,19 @@ export default function Navbar() {
         
         {/* 1. Logo Section with Certification Icon */}
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex flex-col group">
-            <span className="font-serif text-3xl font-bold text-gray-900 tracking-tight transition-colors group-hover:text-purple-600">
-              Lumina<span className="text-purple-500">.</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-sans group-hover:text-purple-600 transition-colors">
-              Skin & Body Collective
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/icons/logo.png"
+              alt="Lumina Skin & Body Collective"
+              width={190}
+              height={52}
+              className="h-12 md:h-[54px] w-auto object-contain"
+              priority
+            />
           </Link>
           
           {/* Dermatologically Tested Icon */}
-          <div className="hidden sm:block relative w-14 h-14 pulse-soft">
+          <div className="relative w-10 h-10 sm:w-14 sm:h-14 pulse-soft">
             <Image
               src="/icons/icon.png"
               alt="Dermatologically Tested"
